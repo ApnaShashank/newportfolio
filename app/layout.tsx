@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   keywords: ["SHASHANK GUPTA", "APNASHASHANK", "Creative Developer", "Frontend Engineer", "Next.js", "Portfolio", "Web Architect"],
   authors: [{ name: "SHASHANK GUPTA" }],
   icons: {
-    icon: "https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png",
+    icon: "https://ik.imagekit.io/DEMOPROJECT/b41c9a4a-27fd-4a8b-a355-a79be19cf9fa.png",
   },
   openGraph: {
     type: "website",
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     siteName: "SHASHANK GUPTA Portfolio",
     images: [
       {
-        url: "https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png",
+        url: "https://ik.imagekit.io/DEMOPROJECT/b41c9a4a-27fd-4a8b-a355-a79be19cf9fa.png",
         width: 1200,
         height: 630,
-        alt: "SHASHANK gupta Portfolio Preview",
+        alt: "SHASHANK GUPTA Portfolio Preview",
       },
     ],
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SHASHANK GUPTA | Creative Developer",
     description: "Official portfolio of SHASHANK GUPTA (APNASHASHANK).",
-    images: ["https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png"],
+    images: ["https://ik.imagekit.io/DEMOPROJECT/b41c9a4a-27fd-4a8b-a355-a79be19cf9fa.png"],
   },
 };
 
