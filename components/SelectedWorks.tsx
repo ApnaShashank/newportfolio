@@ -1,7 +1,65 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  url: string;
+  variant: Variants;
+  imageSide: 'left' | 'right';
+}
+
+function WebsitePreview({ project }: { project: Project }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0.5);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const updateScale = () => {
+      if (containerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        // Target desktop width is 1280px
+        const newScale = containerWidth / 1280;
+        setScale(newScale);
+      }
+    };
+
+    const observer = new ResizeObserver(updateScale);
+    observer.observe(containerRef.current);
+    updateScale(); // Initial call
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div 
+      ref={containerRef}
+      className={`${project.imageSide === 'right' ? 'md:ml-auto' : 'md:mr-auto'} w-full md:w-[65%] aspect-video overflow-hidden bg-surface-container relative ring-1 ring-outline-variant/10 group-hover:ring-primary/40 transition-all duration-700 shadow-2xl`}
+    >
+      {/* Scaled Desktop Preview Wrapper - Mathematically forced 1280px resolution */}
+      <div 
+        className="absolute top-0 left-0 w-[1280px] h-[720px] origin-top-left pointer-events-none grayscale group-hover:grayscale-0 transition-all duration-1000"
+        style={{ transform: `scale(${scale})` }}
+      >
+        <iframe
+          src={project.url}
+          className="w-full h-full border-none"
+          title={project.title}
+          loading="lazy"
+        />
+      </div>
+
+      {/* Hover Arrow Overlay */}
+      <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center mix-blend-overlay z-30">
+        <span className="material-symbols-outlined text-white text-6xl">arrow_outward</span>
+      </div>
+    </div>
+  );
+}
 
 export default function SelectedWorks() {
   const slideFromLeft: Variants = {
@@ -14,7 +72,7 @@ export default function SelectedWorks() {
     visible: { opacity: 1, x: 0, transition: { duration: 1, ease: 'easeOut' } }
   };
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "Brick Negotiate",
@@ -63,7 +121,7 @@ export default function SelectedWorks() {
             onClick={() => window.open(project.url, '_blank')}
             className="flex flex-col md:block relative group cursor-pointer hover-target"
           >
-            {/* Text Overlay (Now responsive) */}
+            {/* Text Overlay (Responsive) */}
             <div className={`
               w-full md:w-auto mb-8 md:mb-0
               md:absolute md:top-1/2 md:-translate-y-1/2 
@@ -78,36 +136,7 @@ export default function SelectedWorks() {
               </span>
             </div>
 
-            {/* Website Preview Container */}
-            <div className={`${project.imageSide === 'right' ? 'md:ml-auto' : 'md:mr-auto'} w-full md:w-[65%] aspect-video overflow-hidden bg-surface-container relative ring-1 ring-outline-variant/10 group-hover:ring-primary/40 transition-all duration-700`}>
-              {/* Scaled Desktop Preview Wrapper - Forced Desktop Resolution */}
-              <div 
-                className="absolute top-0 left-0 w-[1280px] h-[720px] origin-top-left pointer-events-none grayscale group-hover:grayscale-0 transition-all duration-1000"
-                style={{ 
-                  transform: `scale(calc((100vw - 64px) / 1280))` ,
-                  // On Desktop (md+), the container width is roughly 65% of (100vw - 160px)
-                  '--desktop-scale': `calc((min(1440px, 100vw) - 160px) * 0.65 / 1280)`
-                } as any}
-              >
-                {/* Responsive Scale Adjustment for Desktop */}
-                <style jsx>{`
-                  @media (min-width: 768px) {
-                    div { transform: scale(var(--desktop-scale)) !important; }
-                  }
-                `}</style>
-                <iframe
-                  src={project.url}
-                  className="w-full h-full border-none shadow-2xl"
-                  title={project.title}
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Hover Arrow Overlay */}
-              <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center mix-blend-overlay z-30">
-                <span className="material-symbols-outlined text-white text-6xl">arrow_outward</span>
-              </div>
-            </div>
+            <WebsitePreview project={project} />
           </motion.div>
         ))}
       </div>
