@@ -17,32 +17,33 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "APNASHASHANK | Creative Developer & Digital Architect",
-  description: "Portfolio of Shashark (APNASHASHANK), a Creative Developer specializing in high-performance web architecture and kinetic digital experiences.",
-  keywords: ["Creative Developer", "Frontend Engineer", "Next.js", "Framer Motion", "Portfolio", "APNASHASHANK", "Shashank Gupta", "TypeScript", "React"],
-  authors: [{ name: "Shashank Gupta" }],
+  title: "SHASHANK GUPTA | Creative Developer & Digital Architect",
+  description: "Official portfolio of SHASHANK GUPTA (APNASHASHANK). Specializing in high-performance web architecture, kinetic digital experiences, and creative engineering.",
+  keywords: ["SHASHANK GUPTA", "APNASHASHANK", "Creative Developer", "Frontend Engineer", "Next.js", "Portfolio", "Web Architect"],
+  authors: [{ name: "SHASHANK GUPTA" }],
   icons: {
     icon: "https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "APNASHASHANK | Creative Developer",
-    description: "Portfolio of Shashark, a Creative Developer specializing in high-performance web architecture and digital experiences.",
-    siteName: "ApnaShashank Portfolio",
+    url: "https://shashankguptadot.vercel.app/", // Placeholder, adjust if needed
+    title: "SHASHANK GUPTA | Creative Developer",
+    description: "Modern digital experiences and high-performance web architecture by SHASHANK gupta.",
+    siteName: "SHASHANK GUPTA Portfolio",
     images: [
       {
         url: "https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png",
         width: 1200,
         height: 630,
-        alt: "APNASHASHANK Portfolio Logo",
+        alt: "SHASHANK gupta Portfolio Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "APNASHASHANK | Creative Developer",
-    description: "Modern portfolio of Shashark.",
+    title: "SHASHANK GUPTA | Creative Developer",
+    description: "Official portfolio of SHASHANK GUPTA (APNASHASHANK).",
     images: ["https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png"],
   },
 };
