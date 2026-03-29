@@ -42,7 +42,7 @@ function WebsitePreview({ project }: { project: Project }) {
     >
       {/* Scaled Desktop Preview Wrapper - Mathematically forced 1280px resolution */}
       <div 
-        className="absolute top-0 left-0 w-[1280px] h-[720px] origin-top-left pointer-events-none grayscale group-hover:grayscale-0 transition-all duration-1000"
+        className="absolute top-0 left-0 w-[1280px] h-[720px] origin-top-left pointer-events-none md:grayscale grayscale-0 md:group-hover:grayscale-0 transition-all duration-1000"
         style={{ transform: `scale(${scale})` }}
       >
         <iframe

@@ -18,12 +18,12 @@ export default function CTASection() {
             layoutId="profile-image"
             onClick={() => setIsImageExpanded(true)}
             aria-label="Expand professional portrait"
-            className="w-40 h-40 rounded-full overflow-hidden mb-12 grayscale hover:grayscale-0 transition-all duration-700 ring-1 ring-primary/20 ring-offset-4 ring-offset-background group hover-target cursor-pointer relative"
+            className="w-40 h-40 rounded-full overflow-hidden mb-12 transition-all duration-700 ring-1 ring-primary/20 ring-offset-4 ring-offset-background group hover-target cursor-pointer relative"
           >
             <Image
               fill
               sizes="(max-width: 768px) 160px, 160px"
-              className="object-cover group-hover:scale-110 transition-transform duration-700"
+              className="object-cover object-[center_15%] group-hover:scale-110 transition-transform duration-700"
               alt="Professional portrait of a creative professional"
               src="https://ik.imagekit.io/DEMOPROJECT/ChatGPT%20Image%20Mar%2029,%202026,%2002_27_29%20PM.png"
             />
@@ -75,7 +75,7 @@ export default function CTASection() {
               <Image
                 fill
                 sizes="(max-width: 768px) 100vw, 800px"
-                className="object-cover"
+                className="object-cover object-[center_15%]"
                 alt="Professional portrait of a creative professional"
                 src="https://ik.imagekit.io/DEMOPROJECT/ChatGPT%20Image%20Mar%2029,%202026,%2002_27_29%20PM.png"
               />

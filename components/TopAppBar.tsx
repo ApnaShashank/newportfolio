@@ -35,7 +35,7 @@ export default function TopAppBar() {
         </div>
         <a 
           href="mailto:shashank8808108802@gmail.com?subject=Project%20Inquiry"
-          className="bg-primary-container text-on-primary-container px-6 py-2 text-[10px] font-bold tracking-[0.2em] sharp-border hover:scale-105 transiton-all duration-300 hover-target cursor-pointer block"
+          className="bg-primary text-white px-6 py-2 text-[10px] font-bold tracking-[0.2em] sharp-border hover:scale-105 transiton-all duration-300 hover-target cursor-pointer block"
         >
           SAY HELLO
         </a>

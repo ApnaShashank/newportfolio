@@ -62,7 +62,7 @@ export default function HeroSection() {
         </motion.span>
 
         <motion.h1 
-          className="text-[17vw] sm:text-[12vw] lg:text-[8.5vw] font-headline font-extrabold leading-[0.85] tracking-tighter flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-2 sm:gap-4"
+          className="text-[13vw] sm:text-[12vw] lg:text-[8.5vw] font-headline font-extrabold leading-[0.85] tracking-tighter flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-2 sm:gap-4"
           variants={textVariants}
           initial="hidden"
           animate="visible"
