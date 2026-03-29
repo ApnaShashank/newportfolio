@@ -12,9 +12,9 @@ export default function TopAppBar() {
   return (
     <header className="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md">
       <nav className="flex justify-between items-center px-8 md:px-20 py-6 w-full max-w-[1440px] mx-auto">
-          <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-2xl">terminal</span>
-            <span className="text-xl font-light italic tracking-tighter text-zinc-100 font-headline">
+          <div className="flex items-center gap-2 h-full py-1">
+            <span className="material-symbols-outlined text-primary text-xl translate-y-px">terminal</span>
+            <span className="text-lg font-light italic tracking-tighter text-zinc-100 font-headline leading-none">
               APNASHASHANK
             </span>
           </div>

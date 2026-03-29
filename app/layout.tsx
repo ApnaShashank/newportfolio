@@ -17,21 +17,33 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "SHASHANK GUPTA | Creative Developer & Digital Architect",
-  description: "Portfolio of Shashank Gupta, a Creative Developer specializing in high-performance web architecture and kinetic digital experiences.",
-  keywords: ["Creative Developer", "Frontend Engineer", "Next.js", "Framer Motion", "Portfolio", "Shashank Gupta", "TypeScript", "React"],
+  title: "APNASHASHANK | Creative Developer & Digital Architect",
+  description: "Portfolio of Shashark (APNASHASHANK), a Creative Developer specializing in high-performance web architecture and kinetic digital experiences.",
+  keywords: ["Creative Developer", "Frontend Engineer", "Next.js", "Framer Motion", "Portfolio", "APNASHASHANK", "Shashank Gupta", "TypeScript", "React"],
   authors: [{ name: "Shashank Gupta" }],
+  icons: {
+    icon: "https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "SHASHANK GUPTA | Creative Developer",
-    description: "Portfolio of Shashank Gupta, a Creative Developer specializing in high-performance web architecture and digital experiences.",
-    siteName: "Shashank Gupta Portfolio",
+    title: "APNASHASHANK | Creative Developer",
+    description: "Portfolio of Shashark, a Creative Developer specializing in high-performance web architecture and digital experiences.",
+    siteName: "ApnaShashank Portfolio",
+    images: [
+      {
+        url: "https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png",
+        width: 1200,
+        height: 630,
+        alt: "APNASHASHANK Portfolio Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SHASHANK GUPTA | Creative Developer",
-    description: "Modern portfolio of Shashank Gupta.",
+    title: "APNASHASHANK | Creative Developer",
+    description: "Modern portfolio of Shashark.",
+    images: ["https://ik.imagekit.io/DEMOPROJECT/04469356-9593-4667-9250-025b884ccb23.png"],
   },
 };
 
