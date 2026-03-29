@@ -12,16 +12,12 @@ export default function TopAppBar() {
   return (
     <header className="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md">
       <nav className="flex justify-between items-center px-8 md:px-20 py-6 w-full max-w-[1440px] mx-auto">
-        <button 
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          aria-label="Scroll to top of page"
-          className="text-xl font-light italic tracking-tighter text-zinc-100 font-headline hover-target outline-none!"
-        >
-          SHASHANK_GUPTA
-        </button>
+          <div className="flex items-center gap-2">
+            <span className="material-symbols-outlined text-primary text-2xl">terminal</span>
+            <span className="text-xl font-light italic tracking-tighter text-zinc-100 font-headline">
+              APNASHASHANK
+            </span>
+          </div>
         <div className="hidden md:flex gap-6 items-center">
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
