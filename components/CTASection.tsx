@@ -45,7 +45,7 @@ export default function CTASection() {
               HIRE ME
             </a>
             <a 
-              href="https://ik.imagekit.io/DEMOPROJECT/Shashank_Gupta_Resume%20(5).pdf"
+              href="https://ik.imagekit.io/DEMOPROJECT/Shashank_Gupta.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-4 border border-outline-variant/30 px-10 py-5 font-bold tracking-[0.2em] sharp-border text-sm text-on-surface hover:border-primary hover:text-primary transition-all duration-300 hover-target w-full sm:w-auto"
